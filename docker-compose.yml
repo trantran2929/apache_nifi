@@ -1,0 +1,18 @@
+services:
+  nifi:
+    image: apache/nifi:latest
+    container_name: nifi
+    ports:
+      - "8443:8443"
+    volumes:
+       - ./nifi/logs:/opt/nifi/nifi-current/logs
+    restart: always
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo/data:/data/db
+    restart: always

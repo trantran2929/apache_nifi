@@ -1,0 +1,5 @@
+db.flight.find()
+db.flight.countDocuments()
+show collections
+use lab1
+show dbs
